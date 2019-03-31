@@ -9,12 +9,11 @@ class Application
        item = @@item.find do |item| 
          if item.name == item_name
         resp.write item.price
-      else 
+        else 
        resp.status = 404
      end   
-   
+   end 
     end   
-    
     resp.finish
   end   
   
