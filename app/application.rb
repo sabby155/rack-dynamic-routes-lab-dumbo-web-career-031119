@@ -5,10 +5,10 @@
         req = Rack::Request.new(env)
 
         if req.path.match(/items/)
-            the_item = req.path.split("/items/").last
+            item_name = req.path.split("/items/").last
 
             @@items.find do |item| 
-                if item.name == the_item
+                if item.name == item_name
                     resp.write item.price
                 elsif item == @@items.last
                     resp.write "Error: Item not found"
