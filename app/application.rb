@@ -6,7 +6,8 @@ class Application
     @@items = []
     
     if req.path.match(/items/)
-          
+    
+    item      
       
     end   
     
