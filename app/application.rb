@@ -7,14 +7,14 @@
         if req.path.match(/items/)
             the_item = req.path.split("/items/").last
 
-            @@items.find{|item| 
+            @@items.find do |item| 
                 if item.name == the_item
                     resp.write item.price
                 elsif item == @@items.last
                     resp.write "Error: Item not found"
                     resp.status = 400
                 end
-            }
+            end
         else
             resp.write "Error: Route not found."
             resp.status = 404
