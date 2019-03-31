@@ -1,4 +1,6 @@
 class Application 
+  
+  
   def call(env)
     resp = Rack::Response.new
     req = Rack::Response.new(env)
@@ -6,8 +8,8 @@ class Application
 
       if req.path.match(/items/)
         item_name = req.path.split("/items/").last 
-       item = @@item.find do |item| 
-         if item.name == item_name
+        item = @@items.find do |item| 
+         if item_name == item
         resp.write item.price
         else 
        resp.status = 404
