@@ -7,7 +7,7 @@ class Application
     
     if req.path.match(/items/)
     
-    item      
+    item_name =       
       
     end   
     
