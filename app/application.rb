@@ -8,8 +8,9 @@ class Application
 
       if req.path.match(/items/)
         item_name = req.path.split("/items/").last 
+        
         item = @@items.find do |item| 
-         if item_name == item
+         if item.name == item_name
         resp.write item.price
         else 
        resp.status = 404
