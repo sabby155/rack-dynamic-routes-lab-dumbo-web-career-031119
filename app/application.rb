@@ -1,6 +1,4 @@
 class Application 
-  
-  
   def call(env)
     resp = Rack::Response.new
     req = Rack::Response.new(env)
@@ -14,11 +12,9 @@ class Application
           else 
              resp.status = 404
           end   
-      end 
-    end   
+      end   
     resp.finish
   end   
-  
 end   
 
 
