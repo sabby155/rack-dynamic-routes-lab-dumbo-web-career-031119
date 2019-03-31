@@ -13,8 +13,8 @@ class Application
           elsif item == items.last 
             resp.write "Error: Item not found"
            resp.status = 400
-        end  
-        
+          end  
+          end  
       end   
       
     resp.finish
