@@ -10,7 +10,7 @@ class Application
         @@items.find do |item|
             if item.name == item_name
               resp.write item.price
-            elsif item == items.last 
+            elsif item == @@items.last 
               resp.write "Error: Item not found"
               resp.status = 400
             end  
