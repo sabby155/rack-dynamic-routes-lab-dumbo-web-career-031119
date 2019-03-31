@@ -11,7 +11,8 @@ class Application
           if item.name == item_name
             resp.write item.price
           elsif item == items.last 
-           resp
+            resp.write "Error: Item not found"
+           resp.status = 400
         end  
         
       end   
